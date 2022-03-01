@@ -38,8 +38,7 @@ Feb 28 02:36:36 masternode httpd[17739]: AH00558: httpd: Could not reliably dete
 Feb 28 02:36:47 masternode systemd[1]: Started The Apache HTTP Server.
 </code></pre>
 <h2 id="download-cloudera-manager-repo-and-rpm-files">Download cloudera-manager repo and RPM files:</h2>
-<pre><code>[rvalusa@masternode downloads]$ cd /etc/yum.repos.d/
-
+<pre><code>[rvalusa@masternode downloads]$ cd /etc/yum.repos.d/    
 [rvalusa@masternode yum.repos.d]$ sudo wget https://archive.cloudera.com//cm7/7.4.4/redhat7/yum/cloudera-manager.repo
 [sudo] password for rvalusa:
 --2022-02-28 02:41:41--  https://archive.cloudera.com//cm7/7.4.4/redhat7/yum/cloudera-manager.repo
