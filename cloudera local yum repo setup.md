@@ -13,12 +13,9 @@
 <pre><code>sudo yum -y install wget createrepo yum-utils
 </code></pre>
 <p>We need Apache webserver to host the cloudera manager package files as local yum repo, so that we need to install httpd, enable the httpd service to start the service on every server startup automatically.</p>
-<pre><code>[rvalusa@masternode downloads]$ sudo yum install -y httpd
-
-[rvalusa@masternode downloads]$ sudo systemctl enable httpd
-
-[rvalusa@masternode downloads]$ sudo systemctl start httpd
-
+<pre><code>[rvalusa@masternode downloads]$ sudo yum install -y httpd    
+[rvalusa@masternode downloads]$ sudo systemctl enable httpd    
+[rvalusa@masternode downloads]$ sudo systemctl start httpd    
 [rvalusa@masternode downloads]$ systemctl status httpd
 httpd.service - The Apache HTTP Server
    Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
