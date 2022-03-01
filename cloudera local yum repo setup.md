@@ -88,8 +88,8 @@ module_hotfixes=true
 </code></pre>
 <p>In the above <strong>cloudera-manager.repo</strong> file remove the <strong>p</strong> from the baseurl and gpgkey of the repo and save it.</p>
 <p><strong>before:</strong><br>
-baseurl=https://archive.cloudera.com/<strong>p</strong>/cm7/7.4.4/redhat7/yum/<br>
-gpgkey=https://archive.cloudera.com/<strong>p</strong>/cm7/7.4.4/redhat7/yum/RPM-GPG-KEY-cloudera</p>
+baseurl=https://archive.cloudera.com/<em><strong>p</strong></em>/cm7/7.4.4/redhat7/yum/<br>
+gpgkey=https://archive.cloudera.com/<em><strong>p</strong></em>/cm7/7.4.4/redhat7/yum/RPM-GPG-KEY-cloudera</p>
 <p><strong>after:</strong><br>
 baseurl=https://archive.cloudera.com/cm7/7.4.4/redhat7/yum/<br>
 gpgkey=https://archive.cloudera.com/cm7/7.4.4/redhat7/yum/RPM-GPG-KEY-cloudera</p>
