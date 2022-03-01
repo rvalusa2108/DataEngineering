@@ -93,6 +93,7 @@ gpgkey=https://archive.cloudera.com/<em><strong>p</strong></em>/cm7/7.4.4/redhat
 <p><strong>after:</strong><br>
 baseurl=https://archive.cloudera.com/cm7/7.4.4/redhat7/yum/<br>
 gpgkey=https://archive.cloudera.com/cm7/7.4.4/redhat7/yum/RPM-GPG-KEY-cloudera</p>
+<p>Now perform the <strong>cloudera-manager reposync</strong> to download the required RPMS and keys.</p>
 <pre><code>[rvalusa@masternode yum.repos.d]$ cd /var/www/html
 
 [rvalusa@masternode html]$ sudo reposync -r cloudera-manager
