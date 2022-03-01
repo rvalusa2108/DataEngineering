@@ -93,4 +93,29 @@ gpgkey=https://archive.cloudera.com/<em><strong>p</strong></em>/cm7/7.4.4/redhat
 <p><strong>after:</strong><br>
 baseurl=https://archive.cloudera.com/cm7/7.4.4/redhat7/yum/<br>
 gpgkey=https://archive.cloudera.com/cm7/7.4.4/redhat7/yum/RPM-GPG-KEY-cloudera</p>
+<pre><code>[rvalusa@masternode yum.repos.d]$ cd /var/www/html
+
+[rvalusa@masternode html]$ sudo reposync -r cloudera-manager
+cloudera-manager                                                                                                                                                                                                                                                                                          | 2.9 kB  00:00:00
+postgresql10                                                                                                                                                                                                                                                                                              | 2.9 kB  00:00:00
+(1/2): cloudera-manager/primary_db                                                                                                                                                                                                                                                                        | 8.2 kB  00:00:05
+(2/2): postgresql10/primary_db                                                                                                                                                                                                                                                                            | 7.5 kB  00:00:05
+warning: /var/www/html/cloudera-manager/RPMS/x86_64/cloudera-manager-agent-7.4.4-15850731.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID b0b19c9f: NOKEY                                                                                                                               ] 3.4 MB/s |  55 MB  00:08:41 ETA
+Public key for cloudera-manager-agent-7.4.4-15850731.el7.x86_64.rpm is not installed
+(1/5): cloudera-manager-agent-7.4.4-15850731.el7.x86_64.rpm                                                                                                                                                                                                                                               |  29 MB  00:00:22
+(2/5): cloudera-manager-server-7.4.4-15850731.el7.x86_64.rpm                                                                                                                                                                                                                                              |  13 kB  00:00:00
+(3/5): cloudera-manager-server-db-2-7.4.4-15850731.el7.x86_64.rpm                                                                                                                                                                                                                                         |  11 kB  00:00:00
+(4/5): openjdk8-8.0+232_9-cloudera.x86_64.rpm                                                                                                                                                                                                                                                             | 100 MB  00:01:01
+(5/5): cloudera-manager-daemons-7.4.4-15850731.el7.x86_64.rpm                                                                                                                                                                                                                                             | 1.6 GB  00:16:23
+
+[rvalusa@masternode html]$ ls -ltrah cloudera-manager/RPMS/x86_64
+total 1.8G
+-rw-r--r--. 1 root root  11K Aug  5  2021 cloudera-manager-server-db-2-7.4.4-15850731.el7.x86_64.rpm
+-rw-r--r--. 1 root root  13K Aug  5  2021 cloudera-manager-server-7.4.4-15850731.el7.x86_64.rpm
+-rw-r--r--. 1 root root 1.7G Aug  5  2021 cloudera-manager-daemons-7.4.4-15850731.el7.x86_64.rpm
+-rw-r--r--. 1 root root  29M Aug  5  2021 cloudera-manager-agent-7.4.4-15850731.el7.x86_64.rpm
+-rw-r--r--. 1 root root 100M Aug  5  2021 openjdk8-8.0+232_9-cloudera.x86_64.rpm
+drwxr-xr-x. 3 root root   20 Feb 28 02:50 ..
+drwxr-xr-x. 2 root root 4.0K Feb 28 02:50 .
+</code></pre>
 
